@@ -110,6 +110,6 @@ posts:
     body: "frontmatterContent"
 
   reCaptcha:
-    enabled: true
+    enabled: false
     siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"
     secret: "6LcT8dESAAAAAGtlMUzYH6YKko8UwLU0wx7LKLBh"

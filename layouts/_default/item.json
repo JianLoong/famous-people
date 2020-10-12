@@ -1,0 +1,7 @@
+{
+    "name": "{{ .Title }}",
+    "description" : "{{ .Description }}",
+    "permalink" : "{{ .Permalink }}",
+    "date": "{{ .Date }}",
+    "content": "{{ chomp .Page.Content }}"
+}

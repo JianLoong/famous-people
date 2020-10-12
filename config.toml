@@ -1,0 +1,104 @@
+baseURL = "/"
+languageCode = "en-us"
+theme = "vanilla-bootstrap-hugo-theme"
+title = "People API - A Crowd Sourced REST API"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+
+[permalinks]
+post = "/:filename/"
+tags = "/people/:slug"
+
+
+[[menu.nav]]
+name = "Home"
+pre = "home"
+url = "/"
+weight = 1
+
+[[menu.nav]]
+name = "People"
+pre = "server"
+url = "/people/"
+weight = 2
+
+
+[[menu.nav]]
+name = "API"
+pre = "database"
+url = "/api/"
+weight = 2
+
+[[menu.nav]]
+name = "Tags"
+pre = "tag"
+url = "/tags/"
+weight = 3
+
+[[menu.nav]]
+name = "About"
+pre = "info"
+url = "/about/"
+weight = 5
+
+[[menu.nav]]
+name = "Contribute"
+pre = "book-open"
+url = "/contribute/"
+weight = 4
+
+[params]
+containerMaxWidth = "1000px"
+dateFormat = "Jan 2, 2006"
+footerText = "Made with [Hugo](https://gohugo.io/) & [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)"
+hideFooter = false
+homeText = "Welcome to the Vanilla theme demo. Have a look around. Maybe even eat some ice cream."
+includeBootstrapJs = false
+katex = false
+showActiveNav = true
+staticman = "https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts"
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+
+[markup.goldmark.parser]
+attribute = true
+autoHeadingID = true
+
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xHTML = false
+
+[markup.highlight]
+codeFences = true
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+style = "monokai"
+tabWidth = 4
+
+[markup.tableOfContents]
+endLevel = 6
+startLevel = 2
+
+[outputs]
+page = ["html", "json"]
+section = ["html", "json"]
+taxonomies = ["html","json"]
+term = ["html","json"]
+

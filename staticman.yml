@@ -59,9 +59,8 @@ comments:
     email: md5
 
 posts:
-  # allowedFields: ["title", "body"]
-  allowedFields: ["name", "known-for", "description"]
-  allowedOrigins: ["localhost", "hugo.staticman.net"]
+  allowedFields: ["title", "tags", "description","body"]
+  allowedOrigins: ["localhost", ""]
   branch: "main"
   generatedFields:
     date:
@@ -69,14 +68,16 @@ posts:
     slug:
       type: slugify
       options:
-        field: title
-    tags: ["user-generated"]
+        field: knownFor
   format: "frontmatter"
   moderation: true
-  name: "Hugo + Staticman"
-  path: "content/post"
+  name: "Famous People API"
+  path: "content/people/person"
   filename: "{@id}"
-  # requiredFields: ["title", "body"]
-  requiredFields: ["name", "known-for", "description"]
+  requiredFields: ["title", "tags", "description", "body"]
   transforms:
     body: "frontmatterContent"
+  reCaptcha:
+    enabled: true
+    siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"
+    secret: "6LcT8dESAAAAAGtlMUzYH6YKko8UwLU0wx7LKLBh"

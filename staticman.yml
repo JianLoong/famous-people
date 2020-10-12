@@ -59,7 +59,8 @@ comments:
     email: md5
 
 posts:
-  allowedFields: ["title", "body"]
+  # allowedFields: ["title", "body"]
+  allowedFields: ["name", "known-for", "description"]
   allowedOrigins: ["localhost", "hugo.staticman.net"]
   branch: "main"
   generatedFields:
@@ -75,6 +76,7 @@ posts:
   name: "Hugo + Staticman"
   path: "content/post"
   filename: "{@id}"
-  requiredFields: ["title", "body"]
+  # requiredFields: ["title", "body"]
+  requiredFields: ["name", "known-for", "description"]
   transforms:
     body: "frontmatterContent"

@@ -30,8 +30,9 @@
 
   <form class="post-new-comment" method="POST" action="https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts">
     <input type="hidden" name="options[redirect]" value="">
-    <input name="fields[title]" type="text" class="post-comment-field" placeholder="Title">
-    <textarea name="fields[body]" class="post-comment-field" placeholder="The content. Feel free to use Markdown." rows="10"></textarea>
+    <input name="fields[name]" type="text" class="post-comment-field" placeholder="Title">
+    <input name="fields[known-for]" type="text" class="post-comment-field" placeholder="Known For">
+    <textarea name="fields[description]" class="post-comment-field" placeholder="The content. Feel free to use Markdown." rows="10"></textarea>
     <input type="submit" class="post-comment-field btn" value="Submit">
   </form>
   

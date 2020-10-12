@@ -1,80 +1,78 @@
-# Name of the property. You can have multiple properties with completely
-# different config blocks for different sections of your site.
-# For example, you can have one property to handle comment submission and
-# another one to handle posts.
-comments:
-  # (*) REQUIRED
-  #
-  # Names of the fields the form is allowed to submit. If a field that is
-  # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "body"]
+baseURL: https://example.com
+languageCode: en-us
+title: Vanilla
+theme: vanilla-bootstrap-hugo-theme
+googleAnalytics: 
 
-  # When allowedOrigins is defined, only requests sent from one of the domains
-  # listed will be accepted.
-  allowedOrigins: ["localhost", "hugo.staticman.net"]
+taxonomies:
+  tag: tags
 
-  # (*) REQUIRED
-  #
-  # Name of the branch being used. Must match the one sent in the URL of the
-  # request.
-  branch: "main"
+permalinks:
+  post: /:filename/
 
-  # List of fields to be populated automatically by Staticman and included in
-  # the data file. Keys are the name of the field. The value can be an object
-  # with a `type` property, which configures the generated field, or any value
-  # to be used directly (e.g. a string, number or array)
-  generatedFields:
-    date:
-      type: date
+# See https://feathericons.com/
+# The value of pre is the icon name
+menu:
+  nav:
+  - name: Home
+    pre: home
+    url: /
+    weight: 1
+  - name: Database
+    pre: database
+    url: /post/
+    weight: 2
+  - name: Tags
+    pre: tag
+    url: /tags/
+    weight: 3
+  - name: About
+    pre: smile
+    url: /about/
+    weight: 4
+  - name: Data
+    pre:  book-open
+    url: /data/
+    weight: 5
 
-  # The format of the generated data files. Accepted values are "json", "yaml"
-  # or "frontmatter"
-  format: "json"
+params:
+  includeBootstrapJs: false
+  showActiveNav: true
+  containerMaxWidth: 700px
+  dateFormat: Jan 2, 2006
+  homeText: Welcome to the Vanilla theme demo. Have a look around. Maybe even eat some ice cream.
+  footerText: Made with [Hugo](https://gohugo.io/) & [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)
+  hideFooter: false
+  katex: false
+  staticman: https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts
 
-  # Whether entries need to be appproved before they are published to the main
-  # branch. If set to `true`, a pull request will be created for your approval.
-  # Otherwise, entries will be published to the main branch automatically.
-  moderation: true
-
-  # Name of the site. Used in notification emails.
-  name: "Hugo + Staticman"
-
-  # (*) REQUIRED
-  #
-  # Destination path (directory) for the data files. Accepts placeholders.
-  path: "data/comments/{options.entryId}"
-
-  # (*) REQUIRED
-  #
-  # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "{@id}"
-
-  # Names of required files. If any of these isn't in the request or is empty,
-  # an error will be thrown.
-  requiredFields: ["name", "body"]
-
-  # List of transformations to apply to any of the fields supplied. Keys are
-  # the name of the field and values are possible transformation types.
-  transforms:
-    email: md5
-
-posts:
-  allowedFields: ["title", "body"]
-  allowedOrigins: ["localhost", "hugo.staticman.net"]
-  branch: "main"
-  generatedFields:
-    date:
-      type: date
-    slug:
-      type: slugify
-      options:
-        field: title
-    tags: ["user-generated"]
-  format: "frontmatter"
-  moderation: true
-  name: "Hugo + Staticman"
-  path: "content/post"
-  filename: "{fields.slug}"
-  requiredFields: ["title", "body"]
-  transforms:
-    body: "frontmatterContent"
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: true
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2

@@ -11,7 +11,6 @@
   />
 
   <input name="options[redirect]" type="hidden" value="" />
-  <input name="options[slug]" type="hidden" value="{{ delimit (shuffle (seq 1 9)) "" }}  " />
   <div class="form-group">
     <label>Name: </label>
       <input class="form-control" name="fields[name]" type="text" />
@@ -36,5 +35,14 @@
   <input type="submit" class="btn btn-primary" value="Submit" />
 
 </form>
+
+<div id="comment-submitted" class="dialog">
+  <h3>Thank you</h3>
+    <p>Your comment has been submitted and will be published once it has been approved.</p>
+    <p><a href="https://github.com/eduardoboucas/hugo-plus-staticman/pulls">Click here</a> to see the pull request you generated.</p>
+    
+    <p><a href="#" class="btn">OK</a></p>
+  </div>
+
 
 <script src='https://www.google.com/recaptcha/api.js'></script>

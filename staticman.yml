@@ -91,7 +91,7 @@ reCaptcha:
 
 posts:
   allowedFields: ["name", "known-for", "description"]
-  allowedOrigins: ["localhost", "hugo.staticman.net"]
+  allowedOrigins: ["localhost", ""]
   branch: "main"
   generatedFields:
     date:
@@ -100,7 +100,7 @@ posts:
       type: slugify
       options:
         field: title
-    tags: ["{fields.known-for}"]
+    tags: ["user-generated"]
   format: "frontmatter"
   moderation: true
   path: "content/post"
@@ -108,3 +108,8 @@ posts:
   requiredFields: ["name", "known-for", "description"]
   transforms:
     body: "frontmatterContent"
+
+  reCaptcha:
+    enabled: true
+    siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"
+    secret: "6LcT8dESAAAAAGtlMUzYH6YKko8UwLU0wx7LKLBh"

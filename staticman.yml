@@ -84,14 +84,14 @@ comments:
   transforms:
     email: md5
 
-reCaptcha:
-  enabled: true
-  siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"
-  secret: "6LcT8dESAAAAAGtlMUzYH6YKko8UwLU0wx7LKLBh"
+  reCaptcha:
+    enabled: true
+    siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"
+    secret: "6LcT8dESAAAAAGtlMUzYH6YKko8UwLU0wx7LKLBh"
 
 posts:
   allowedFields: ["name", "known-for", "description"]
-  # allowedOrigins: ["localhost", ""]
+  allowedOrigins: ["localhost", ""]
   branch: "main"
   generatedFields:
     date:

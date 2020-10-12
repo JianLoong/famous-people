@@ -154,7 +154,7 @@ comments:
 posts:
   allowedFields: ["title", "body"]
   allowedOrigins: ["localhost", "hugo.staticman.net"]
-  branch: "master"
+  branch: "main"
   generatedFields:
     date:
       type: date

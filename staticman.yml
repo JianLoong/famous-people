@@ -34,6 +34,7 @@ comments:
   # or "frontmatter"
   format: "json"
 
+
   # List of fields to be populated automatically by Staticman and included in
   # the data file. Keys are the name of the field. The value can be an object
   # with a `type` property, which configures the generated field, or any value
@@ -56,18 +57,18 @@ comments:
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
   #notifications:
-  # Enable notifications
-  #enabled: true
+    # Enable notifications
+    #enabled: true
 
-  # (!) ENCRYPTED
-  #
-  # Mailgun API key
-  #apiKey: "1q2w3e4r"
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    #apiKey: "1q2w3e4r"
 
-  # (!) ENCRYPTED
-  #
-  # Mailgun domain (encrypted)
-  #domain: "4r3e2w1q"
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    #domain: "4r3e2w1q"
 
   # (*) REQUIRED
   #
@@ -99,7 +100,7 @@ posts:
       type: slugify
       options:
         field: title
-    tags: "{fields.known-for}"
+    tags: ["user-generated"]
   format: "frontmatter"
   moderation: true
   name: "Hugo + Staticman"
@@ -108,8 +109,3 @@ posts:
   requiredFields: ["name", "known-for", "description"]
   transforms:
     body: "frontmatterContent"
-
-  reCaptcha:
-    enabled: false
-    siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"
-    secret: "6LcT8dESAAAAAGtlMUzYH6YKko8UwLU0wx7LKLBh"

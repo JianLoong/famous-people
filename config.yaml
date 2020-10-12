@@ -44,7 +44,7 @@ params:
   footerText: Made with [Hugo](https://gohugo.io/) & [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)
   hideFooter: false
   katex: false
-  staticman: https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/TestStaticmanLab/master/comments
+  staticman: https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/comments
 
 markup:
   defaultMarkdownHandler: goldmark

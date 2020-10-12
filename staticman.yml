@@ -82,24 +82,7 @@ comments:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
-
-comments:
-  allowedFields: ["name", "email", "website", "comment"]
-  branch            : "master"
-  commitMessage     : "New comment in {options.slug}"
-  path: "data/comments/{options.slug}"
-  filename          : "comment-{@timestamp}"
-  format            : "yaml"
-  moderation        : true
-  requiredFields    : ['name', 'email', 'comment']
-  transforms:
-    email           : md5
-  generatedFields:
-    date:
-      type          : "date"
-      options:
-        format      : "iso8601"
-
+    
 reCaptcha:
   enabled: true
   siteKey: "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"

@@ -51,7 +51,7 @@ comments:
   moderation: true
 
   # Name of the site. Used in notification emails.
-  name: "eduardoboucas.com"
+  # name: "eduardoboucas.com"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
@@ -100,10 +100,9 @@ posts:
       type: slugify
       options:
         field: title
-    tags: ["user-generated"]
+    tags: ["{fields.known-for}"]
   format: "frontmatter"
   moderation: true
-  name: "Hugo + Staticman"
   path: "content/post"
   filename: "{fields.slug}"
   requiredFields: ["name", "known-for", "description"]

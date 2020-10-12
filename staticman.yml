@@ -91,7 +91,7 @@ reCaptcha:
 
 posts:
   allowedFields: ["name", "known-for", "description"]
-  allowedOrigins: ["localhost", ""]
+  # allowedOrigins: ["localhost", ""]
   branch: "main"
   generatedFields:
     date:

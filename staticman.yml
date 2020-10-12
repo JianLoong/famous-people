@@ -32,7 +32,11 @@ comments:
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
-  format: "json"
+  format: "frontmatter"
+  extension: "md"
+
+  transform: 
+    message: "frontmatterContent"
 
   # List of fields to be populated automatically by Staticman and included in
   # the data file. Keys are the name of the field. The value can be an object

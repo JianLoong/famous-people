@@ -1,0 +1,3 @@
+.container {
+    max-width: {{ .Site.Params.containerMaxWidth | default "700px" | safeCSS }};
+  }

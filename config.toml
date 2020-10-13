@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 theme = "vanilla-bootstrap-hugo-theme"
 title = "People API - A Crowd Sourced REST API"
+paginate = 1
 
 [taxonomies]
 category = "categories"
@@ -10,7 +11,7 @@ tag = "tags"
 
 [permalinks]
 post = "/:filename/"
-tags = "/people/:slug"
+tags = "/people/v1/:slug"
 
 
 [[menu.nav]]
@@ -60,6 +61,8 @@ includeBootstrapJs = false
 katex = false
 showActiveNav = true
 staticman = "https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts"
+_id = true
+
 
 [markup]
 defaultMarkdownHandler = "goldmark"

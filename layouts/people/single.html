@@ -3,6 +3,8 @@
 <h1>{{ .Title }}</h1>
 {{ partial "date-and-tags.html" . }}
 <br><br>
+<p>Id: {{ .Params._id }}</p>
+
 {{ .Content }}
 
 {{ end }}

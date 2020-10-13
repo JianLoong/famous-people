@@ -1,7 +1,8 @@
 {
+    "_id": "{{ .Params._id }}",
     "name": "{{ .Title }}",
     "description" : "{{ .Description }}",
     "permalink" : "{{ .Permalink }}",
     "date": "{{ .Date }}",
-    "content": "{{ chomp .Page.Content }}"
+    "content": "{{ htmlEscape .Page.Content | replaceRE "\n" "" }}"
 }

@@ -1,16 +1,15 @@
-# Famous People API
-Famous people API obtained via crowd sourcing. 
+# Famous People
 
-Currently this project is still in its infant stages.
+Famous People is a simple and easy to use read only REST API.
 
 # Motivations
 
 The objective of this project is to create a crowd sourced API where people can
-query information about a person.
+query information about a person. Information can also be entered easily and the information can then be queried.
 
 # Flow
 
-Whenever a user contributes data via the front page, it will send a PR to this repository. This is done via the staticman bot.
+Whenever a user contributes data via the front page done via the contribute page, it will send a PR to this repository. This is all automated. 
 
 When this PR is merged, it will re-create the needed pages which are statically generated for the REST API to work. 
 

@@ -1,6 +1,4 @@
 <form id="createPerson">
-  <input type="hidden" name="options[reCaptcha][siteKey]" value="6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3" id="siteKey">
-  <input type="hidden" name="options[reCaptcha][secret]" value="jBFzkpxIynZ/EJbztikFL0tf14OY1qr/iFH7VNBBr0oFI2hEU6puh6GFHvkEhH3736jyANX9qCsjpsFIcNhJGNjCiVxcRGdVhyWYhBcAJUl0UnhK45CQX55W6v0J8/gw3npWv7SreAA6Uq4kCJohfX+DoG8hgL6gbY2MUkR16qG7JX9ZW87//GztTV7ueZTp8e7sHW7iontmTJLZcDuJi2ZPwkKCG0Khkuawtf8zz6ZxgCZWg04on3D7kG9ml1xa4azWP/fWvnv6q3M0GWng7ewHjhyqRnCS8sMxuK3L0+u/FMQGIH2X+YNx6s6JSYncPPwu7lbV8lu2K+S5EkdNTZCTOCo+7/VRYJxE5ORq+0S+1ZBm7HorYJKMwgEi9gP42FSHJ4Y/0mpEhQGuRh6weciv7WxPbVHIA5G8/TGPvpqh2x5uAhgFbOBN4tDbbdL9S7CVY7CtfEdUrSYX0fh6zMiPCAhtIOExoVOfL4CSTtWRxZPp8R8ed3f0uMQR1e916Obk+2yqAy9PaiUV6Aw9KZ9zX+BD+Q9zkTX/1rJNOkcInS2SP5C1MWw/Ayip8L+uuYvRBp7hpVjH3GzZOUQJgoUD5+/4VPoc1V8+ginvoCh8uFIUOKoFV53ULKzfKbCP/OVLJ5CR8M/3jEN0uPf7/vCF0wQIj22g04yxfSR6nWU=" id="secret"> 
   <div class="form-group">
     <label>Name: </label>
     <input name="fields[name]" type="text" id="personName" class="form-control" placeholder="Name" required/>
@@ -25,6 +23,8 @@
   <div class="form-group g-recaptcha" data-sitekey="6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"></div>
 
   <input type="submit" class="btn btn-primary" value="Submit" />
+  <input type="hidden" name="options[redirect]" value="/thankyou">
+  <input type="hidden" name="options[redirectError]" value="/error">
 </form>
 
 <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -42,10 +42,13 @@
     var description = document.getElementById("description").value;
     var body = document.getElementById("longDescription").value;
 
-    var siteKey = document.getElementById("siteKey").value;
-    var secret = document.getElementById("secret").value;
+    var siteKey = "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3";
+    var secret = "jBFzkpxIynZ/EJbztikFL0tf14OY1qr/iFH7VNBBr0oFI2hEU6puh6GFHvkEhH3736jyANX9qCsjpsFIcNhJGNjCiVxcRGdVhyWYhBcAJUl0UnhK45CQX55W6v0J8/gw3npWv7SreAA6Uq4kCJohfX+DoG8hgL6gbY2MUkR16qG7JX9ZW87//GztTV7ueZTp8e7sHW7iontmTJLZcDuJi2ZPwkKCG0Khkuawtf8zz6ZxgCZWg04on3D7kG9ml1xa4azWP/fWvnv6q3M0GWng7ewHjhyqRnCS8sMxuK3L0+u/FMQGIH2X+YNx6s6JSYncPPwu7lbV8lu2K+S5EkdNTZCTOCo+7/VRYJxE5ORq+0S+1ZBm7HorYJKMwgEi9gP42FSHJ4Y/0mpEhQGuRh6weciv7WxPbVHIA5G8/TGPvpqh2x5uAhgFbOBN4tDbbdL9S7CVY7CtfEdUrSYX0fh6zMiPCAhtIOExoVOfL4CSTtWRxZPp8R8ed3f0uMQR1e916Obk+2yqAy9PaiUV6Aw9KZ9zX+BD+Q9zkTX/1rJNOkcInS2SP5C1MWw/Ayip8L+uuYvRBp7hpVjH3GzZOUQJgoUD5+/4VPoc1V8+ginvoCh8uFIUOKoFV53ULKzfKbCP/OVLJ5CR8M/3jEN0uPf7/vCF0wQIj22g04yxfSR6nWU=";
 
+    
+    var recaptchaToken = grecaptcha.getResponse();
 
+    
     var myHeaders = new Headers();
 
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -60,6 +63,7 @@
 
     urlencoded.append("options[reCaptcha][siteKey]", siteKey);
     urlencoded.append("options[reCaptcha][secret]", secret);
+    urlencoded.append("g-recaptcha-response",recaptchaToken);
 
     var requestOptions = {
       method: 'POST',

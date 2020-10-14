@@ -1,41 +1,74 @@
 <form id="createPerson">
   <div class="form-group">
     <label>Name: </label>
-    <input name="fields[name]" type="text" id="personName" class="form-control" placeholder="Name" required/>
+    <input
+      name="fields[name]"
+      type="text"
+      id="personName"
+      class="form-control"
+      placeholder="Name"
+      required
+    />
   </div>
 
   <div class="form-group">
     <label>Known for: </label>
-    <input name="fields[tags]" type="text" class="form-control" placeholder="For eg.. History" id="tags" required/>
+    <input
+      name="fields[tags]"
+      type="text"
+      class="form-control"
+      placeholder="For eg.. History"
+      id="tags"
+      required
+    />
   </div>
 
   <div class="form-group">
     <label>Short description </label>
-    <input name="fields[description]" type="text" class="form-control" placeholder="Short description" id="description" required/>
+    <input
+      name="fields[description]"
+      type="text"
+      class="form-control"
+      placeholder="Short description"
+      id="description"
+      required
+    />
   </div>
 
   <div class="form-group">
     <label>Long description: </label>
-    <textarea name="fields[body]" class="form-control" placeholder="Enter description here" id="longDescription"
-      rows="10" required></textarea>
+    <textarea
+      name="fields[body]"
+      class="form-control"
+      placeholder="Enter description here"
+      id="longDescription"
+      rows="10"
+      required
+    ></textarea>
   </div>
 
-  <div class="form-group g-recaptcha" data-sitekey="6Lc9HdcZAAAAAGmTZpdZDx73BRFj-ULtjwRN2AgS"></div>
+  <div
+    class="form-group g-recaptcha"
+    data-sitekey="6Lc9HdcZAAAAAGmTZpdZDx73BRFj-ULtjwRN2AgS"
+  ></div>
 
   <input type="submit" class="btn btn-primary" value="Submit" />
-  <input type="hidden" name="options[redirect]" value="/thankyou">
-  <input type="hidden" name="options[redirectError]" value="/error">
+  <input type="hidden" name="options[redirect]" value="/thankyou" />
+  <input type="hidden" name="options[redirectError]" value="/error" />
 </form>
 
 <script src="https://www.google.com/recaptcha/api.js"></script>
 
-
 <script>
+  function encodeHTML(str) {
+    return str.replace(/[\u00A0-\u9999<>&](?!#)/gim, function (i) {
+      return "&#" + i.charCodeAt(0) + ";";
+    });
+  }
 
   const form = document.getElementById("createPerson");
 
   form.addEventListener("submit", function (e) {
-
     e.preventDefault();
 
     var personName = document.getElementById("personName").value;
@@ -43,16 +76,18 @@
     var description = document.getElementById("description").value;
     var body = document.getElementById("longDescription").value;
 
+    body = encodeHTML(body);
+
     var siteKey = "6Lc9HdcZAAAAAGmTZpdZDx73BRFj-ULtjwRN2AgS";
-    var secret = "V8JYBpRW2PNuv14WsH9jMFU+Fa/NnP6CoSKycGkOp2YGfs170cyw/uA9UjX96VOCBRd02rRr50UNg/H9Ad6zK9lGEFdSripqZ1SkUvp5r0FUxsCqIml5SO/qn/jQCN+Jf35OmBh0P5VYjWCveeM3oqyrR7co57QjgALCckxlR3NwiPj49vdUZRwWCSb8pUiZRAH8PJs8B3mhFv+6/9Ee0AqNcKS5ywmfuzj0FWeUUEzZLKjqWmPttDaqaX/oTWQwlhVJcuJtvq1ehH8+jlNF7zmHPjr+f9WiiOPvzXfOaO/SQXKIU8+xD5l6wYneC9LF7xcYc1MX16i51u7Kkru/GZssMQZQIKwJb0dQi6jOG7lVdNuGcR+9za3WdA9Fwh2sPwJzZxizwFEiF43YJvjlqs9WjctLTYZ5qX2cMWwporfZWLbYzria8gtmtRgczddo9JnyTSyGnxU/xihe4y3E8Ut3jE+05btYMWDMzpNyEEjyAemto6Nk+AdS0SMRVdTQ7jRBfYFlmlmM+woSUYh/qDP2Yew1VNWGXFNdIt7fXYbEIGcn13MNUs3RGlnU96N2LTYimeuh77I+ptJjAPGKQHXYQvPbFPcwMVyFBnBEnvNHwJivkw/7VzvmNUQ8XMwUxyJG4NYqmDYJQjGztzLK47XfmM61P7waN0sdGfduVLs="
-    
+    var secret =
+      "V8JYBpRW2PNuv14WsH9jMFU+Fa/NnP6CoSKycGkOp2YGfs170cyw/uA9UjX96VOCBRd02rRr50UNg/H9Ad6zK9lGEFdSripqZ1SkUvp5r0FUxsCqIml5SO/qn/jQCN+Jf35OmBh0P5VYjWCveeM3oqyrR7co57QjgALCckxlR3NwiPj49vdUZRwWCSb8pUiZRAH8PJs8B3mhFv+6/9Ee0AqNcKS5ywmfuzj0FWeUUEzZLKjqWmPttDaqaX/oTWQwlhVJcuJtvq1ehH8+jlNF7zmHPjr+f9WiiOPvzXfOaO/SQXKIU8+xD5l6wYneC9LF7xcYc1MX16i51u7Kkru/GZssMQZQIKwJb0dQi6jOG7lVdNuGcR+9za3WdA9Fwh2sPwJzZxizwFEiF43YJvjlqs9WjctLTYZ5qX2cMWwporfZWLbYzria8gtmtRgczddo9JnyTSyGnxU/xihe4y3E8Ut3jE+05btYMWDMzpNyEEjyAemto6Nk+AdS0SMRVdTQ7jRBfYFlmlmM+woSUYh/qDP2Yew1VNWGXFNdIt7fXYbEIGcn13MNUs3RGlnU96N2LTYimeuh77I+ptJjAPGKQHXYQvPbFPcwMVyFBnBEnvNHwJivkw/7VzvmNUQ8XMwUxyJG4NYqmDYJQjGztzLK47XfmM61P7waN0sdGfduVLs=";
+
     var recaptchaToken = grecaptcha.getResponse();
 
-    
     var myHeaders = new Headers();
 
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-    
+
     var urlencoded = new URLSearchParams();
     urlencoded.append("fields[title]", personName);
     urlencoded.append("fields[tags]", knownFor);
@@ -63,20 +98,21 @@
 
     urlencoded.append("options[reCaptcha][siteKey]", siteKey);
     urlencoded.append("options[reCaptcha][secret]", secret);
-    urlencoded.append("g-recaptcha-response",recaptchaToken);
+    urlencoded.append("g-recaptcha-response", recaptchaToken);
 
     var requestOptions = {
-      method: 'POST',
+      method: "POST",
       headers: myHeaders,
       body: urlencoded,
-      redirect: 'follow'
+      redirect: "follow",
     };
 
-    fetch("https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts", requestOptions)
-      .then(response => response.text())
-      .then(result => window.location.replace("/thankyou"))
-      .catch(error => window.location.replace("/error"));
-
+    fetch(
+      "https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts",
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => window.location.replace("/error"));
   });
-  
 </script>

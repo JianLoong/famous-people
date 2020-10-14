@@ -1,18 +1,19 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ca645974-c638-4ce7-8094-0dd7a9e59281/deploy-status)](https://app.netlify.com/sites/peopleapi/deploys)
 
-# Status
-
-Currently this project is still is in infant stages.
-
-However, the core concept of it is there.
-
 # People API
 
 People API is a crowd sourced public RESTful API.
 
 The API is a ready-only API.
 
-# Example
+
+# Status
+
+Currently this project is still is in infant stages.
+
+However, the core concept of it is there. Suggestions for improvement are always good to hear.
+
+# Example of RESTful Request
 
 ```bash
 curl --location --request GET 'https://peopleapi.netlify.app/people/v1/person/07f11040-0d6c-11eb-a25a-a7ac8d04aef7/index.json'
@@ -33,7 +34,7 @@ would return
 }
 ```
 
-# Motivations
+# Motivation
 
 The objective of this project is to create a crowd sourced API where people can
 query information about a person. Information can also be entered easily and the information can then be queried.
@@ -51,14 +52,14 @@ to the form and submit a information about a person.
 
 # How to Contribute
 
+Please look [here](https://github.com/JianLoong/famous-people/blob/main/CONTRIBUTING.md)
+
 # Technology Stack
 
 This site is build using
 
 - Hugo
 - Staticman
-- Heroku
 
 This site is actually a static site. There is no database present. All information are stored as markdown files.
 
-# References

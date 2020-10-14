@@ -20,7 +20,7 @@
       rows="10" required></textarea>
   </div>
 
-  <div class="form-group g-recaptcha" data-sitekey="6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3"></div>
+  <div class="form-group g-recaptcha" data-sitekey="6Lc9HdcZAAAAAGmTZpdZDx73BRFj-ULtjwRN2AgS"></div>
 
   <input type="submit" class="btn btn-primary" value="Submit" />
   <input type="hidden" name="options[redirect]" value="/thankyou">
@@ -29,14 +29,6 @@
 
 <script src="https://www.google.com/recaptcha/api.js"></script>
 
-<div id="post-submitted" class="dialog">
-  <h3>Thank you</h3>
-    <p>Your post has been submitted and will be published once it has been approved.</p>
-    <p><a href="https://github.com/JianLoong/famous-people/pulls">Click here</a> to see the pull request you generated.</p>
-  
-  </div>
-  
-  
 
 <script>
 
@@ -51,9 +43,8 @@
     var description = document.getElementById("description").value;
     var body = document.getElementById("longDescription").value;
 
-    var siteKey = "6LcT8dESAAAAAPz2fZkAesZFtjL-Pf6tqXNpH3p3";
-    var secret = "jBFzkpxIynZ/EJbztikFL0tf14OY1qr/iFH7VNBBr0oFI2hEU6puh6GFHvkEhH3736jyANX9qCsjpsFIcNhJGNjCiVxcRGdVhyWYhBcAJUl0UnhK45CQX55W6v0J8/gw3npWv7SreAA6Uq4kCJohfX+DoG8hgL6gbY2MUkR16qG7JX9ZW87//GztTV7ueZTp8e7sHW7iontmTJLZcDuJi2ZPwkKCG0Khkuawtf8zz6ZxgCZWg04on3D7kG9ml1xa4azWP/fWvnv6q3M0GWng7ewHjhyqRnCS8sMxuK3L0+u/FMQGIH2X+YNx6s6JSYncPPwu7lbV8lu2K+S5EkdNTZCTOCo+7/VRYJxE5ORq+0S+1ZBm7HorYJKMwgEi9gP42FSHJ4Y/0mpEhQGuRh6weciv7WxPbVHIA5G8/TGPvpqh2x5uAhgFbOBN4tDbbdL9S7CVY7CtfEdUrSYX0fh6zMiPCAhtIOExoVOfL4CSTtWRxZPp8R8ed3f0uMQR1e916Obk+2yqAy9PaiUV6Aw9KZ9zX+BD+Q9zkTX/1rJNOkcInS2SP5C1MWw/Ayip8L+uuYvRBp7hpVjH3GzZOUQJgoUD5+/4VPoc1V8+ginvoCh8uFIUOKoFV53ULKzfKbCP/OVLJ5CR8M/3jEN0uPf7/vCF0wQIj22g04yxfSR6nWU=";
-
+    var siteKey = "6Lc9HdcZAAAAAGmTZpdZDx73BRFj-ULtjwRN2AgS";
+    var secret = "V8JYBpRW2PNuv14WsH9jMFU+Fa/NnP6CoSKycGkOp2YGfs170cyw/uA9UjX96VOCBRd02rRr50UNg/H9Ad6zK9lGEFdSripqZ1SkUvp5r0FUxsCqIml5SO/qn/jQCN+Jf35OmBh0P5VYjWCveeM3oqyrR7co57QjgALCckxlR3NwiPj49vdUZRwWCSb8pUiZRAH8PJs8B3mhFv+6/9Ee0AqNcKS5ywmfuzj0FWeUUEzZLKjqWmPttDaqaX/oTWQwlhVJcuJtvq1ehH8+jlNF7zmHPjr+f9WiiOPvzXfOaO/SQXKIU8+xD5l6wYneC9LF7xcYc1MX16i51u7Kkru/GZssMQZQIKwJb0dQi6jOG7lVdNuGcR+9za3WdA9Fwh2sPwJzZxizwFEiF43YJvjlqs9WjctLTYZ5qX2cMWwporfZWLbYzria8gtmtRgczddo9JnyTSyGnxU/xihe4y3E8Ut3jE+05btYMWDMzpNyEEjyAemto6Nk+AdS0SMRVdTQ7jRBfYFlmlmM+woSUYh/qDP2Yew1VNWGXFNdIt7fXYbEIGcn13MNUs3RGlnU96N2LTYimeuh77I+ptJjAPGKQHXYQvPbFPcwMVyFBnBEnvNHwJivkw/7VzvmNUQ8XMwUxyJG4NYqmDYJQjGztzLK47XfmM61P7waN0sdGfduVLs="
     
     var recaptchaToken = grecaptcha.getResponse();
 
@@ -83,8 +74,8 @@
 
     fetch("https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts", requestOptions)
       .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+      .then(result => window.location.replace("/thankyou"))
+      .catch(error => window.location.replace("/error"));
 
   });
   

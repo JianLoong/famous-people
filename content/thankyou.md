@@ -1,0 +1,5 @@
+---
+title: Thank You
+---
+
+{{% thankyou %}}

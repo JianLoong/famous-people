@@ -1,6 +1,11 @@
-# Famous People
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ca645974-c638-4ce7-8094-0dd7a9e59281/deploy-status)](https://app.netlify.com/sites/peopleapi/deploys)
 
-Famous People is a simple and easy to use read only REST API.
+
+# People API
+
+People API is a crowd sourced public RESTful API.
+
+The API is a ready-only API.
 
 # Motivations
 

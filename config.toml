@@ -1,18 +1,16 @@
 baseURL = "/"
 languageCode = "en-us"
+paginate = 1
 theme = "vanilla-bootstrap-hugo-theme"
 title = "People API - A Crowd Sourced REST API"
-paginate = 1
 
 [taxonomies]
 category = "categories"
 tag = "tags"
 
-
 [permalinks]
 post = "/:filename/"
 tags = "/people/v1/:slug"
-
 
 [[menu.nav]]
 name = "Home"
@@ -25,7 +23,6 @@ name = "People"
 pre = "server"
 url = "/people/"
 weight = 2
-
 
 [[menu.nav]]
 name = "API"
@@ -52,6 +49,7 @@ url = "/contribute/"
 weight = 4
 
 [params]
+_id = true
 containerMaxWidth = "1000px"
 dateFormat = "Jan 2, 2006"
 footerText = "Made with [Hugo](https://gohugo.io/) & [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)"
@@ -61,8 +59,6 @@ includeBootstrapJs = false
 katex = false
 showActiveNav = true
 staticman = "https://jianloong-staticman.herokuapp.com/v2/entry/JianLoong/famous-people/main/posts"
-_id = true
-
 
 [markup]
 defaultMarkdownHandler = "goldmark"
@@ -102,6 +98,5 @@ startLevel = 2
 [outputs]
 page = ["html", "json"]
 section = ["html", "json"]
-taxonomies = ["html","json"]
-term = ["html","json"]
-
+taxonomies = ["html", "json"]
+term = ["html", "json"]

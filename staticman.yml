@@ -72,7 +72,7 @@ posts:
   format: "frontmatter"
   moderation: true
   name: "Famous People API"
-  path: "content/people/person"
+  path: "content/people/v1/person"
   filename: "{@id}"
   requiredFields: ["title", "tags", "description", "body"]
   transforms:

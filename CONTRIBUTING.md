@@ -1,22 +1,3 @@
-# Contributing
-
-Please note that, it might be slightly time consuming to begin contributing to this project.
-
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-
-Please note we have a code of conduct, please follow it in all your interactions with the project.
-
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
-
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
-
-## We Develop with Github
-We use github to host code, to track issues and feature requests, as well as accept pull requests.
-
 ## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
 Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
 
@@ -29,3 +10,22 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 
 ## Any contributions you make will be under the MIT Software License
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
+
+
+## Quick Start
+
+```bash
+git clone git@github.com:JianLoong/famous-people.git
+
+## Remember to update submodule for theme
+git submodule init
+git submodule update
+
+## Run hugo server
+hugo server
+```
+
+## Todo
+
+- Misc configuration issues for PR to happen
+- How to configure staticman bot

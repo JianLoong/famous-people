@@ -60,7 +60,7 @@ comments:
 
 posts:
   allowedFields: ["title", "tags", "description","body"]
-  allowedOrigins: ["localhost", ""]
+  allowedOrigins: ["localhost", "peopleapi.netlify.app"]
   branch: "main"
   generatedFields:
     date:

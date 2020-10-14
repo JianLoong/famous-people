@@ -112,7 +112,7 @@
       requestOptions
     )
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      .then((result) => window.location.replace("/thankyou"))
       .catch((error) => window.location.replace("/error"));
   });
 </script>

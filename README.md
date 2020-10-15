@@ -1,10 +1,16 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ca645974-c638-4ce7-8094-0dd7a9e59281/deploy-status)](https://app.netlify.com/sites/peopleapi/deploys)
 
 # People API
 
 People API is a crowd sourced public RESTful API.
 
-The API is a ready-only API.
+[![Netlify Status](https://img.shields.io/netlify/ca645974-c638-4ce7-8094-0dd7a9e59281.svg?style=square)](https://github.com/JianLoong/famous-people)
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=square)](https://opensource.org/licenses/MIT)
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=square)](https://github.com/JianLoong/famous-people/issues)
+
+![CODE SIZE](https://img.shields.io/github/languages/code-size/JianLoong/famous-people?style=flat-square) 
 
 
 # Status

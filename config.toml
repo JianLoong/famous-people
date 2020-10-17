@@ -100,3 +100,11 @@ page = ["html", "json"]
 section = ["html", "json"]
 taxonomies = ["html", "json"]
 term = ["html", "json"]
+
+[mediaTypes."text/netlify"]
+suffixes = ""
+delimiter = ""
+
+[outputFormats.redirect]
+mediatype = "text/netlify"
+baseName = "_redirects"

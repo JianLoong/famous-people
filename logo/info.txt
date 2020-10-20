@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Changa-ExtraLight
+font link: https://www.fontsquirrel.com/fonts/changa
+font author: Eduardo Tunni
+font author site: http://www.tipo.net.ar/
+
+
+icon designer: Wilson Joseph
+icon designer link: /wilsonjoseph
+        
+{"bg-gradient-0":"#30223A","bg-gradient-1":"#F13800","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      

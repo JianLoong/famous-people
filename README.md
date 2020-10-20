@@ -1,5 +1,5 @@
 
-# People API
+![Logo](./logo/cover.png)
 
 People API is a **static** and **crowd sourced** public RESTful API.
 
@@ -27,7 +27,7 @@ query information about a person. Information can also be entered easily and the
 
 - **Hugo** will automatically create the front end pages as well as the API end points.
 
-- All information thus, are stored in the Github repository itself.
+- All information thus, are stored in the Github repository itself. 
 
 # Status
 
